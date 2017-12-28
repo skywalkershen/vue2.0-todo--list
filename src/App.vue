@@ -16,7 +16,7 @@ export default {
   name: 'app',
   components: {
     todoList,
-    createTodo
+    createTodo,
   },
   data(){
     return{
