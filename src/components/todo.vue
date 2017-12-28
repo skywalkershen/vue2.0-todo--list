@@ -29,7 +29,7 @@
              </div>
              <div class='field'>
                  <label>Done</label>
-                  <input type='checkbox' v-model="todo.done" >
+                  <!--input type='checkbox' v-model="todo.done" -->
              </div>
                 <div class='ui two button attached buttons'>
                     <button class='ui basic blue button' v-on:click="hideForm">
@@ -38,12 +38,12 @@
                 </div>
             </div>
             </div>
-          <div class ="ui basic green basic button" v-if="todo.done">
+          <button class ="ui basic green basic button" v-on:click="toggleDone(todo)" v-if="todo.done">
               completed
-          </div>
-          <div class ="ui basic red basic button" v-else>
+          </button>
+          <button class ="ui basic red basic button" v-on:click="toggleDone(todo)" v-else>
               Incompleted
-          </div>
+          </button>
           
       </div>
 </template>
@@ -65,6 +65,12 @@ export default {
         },
         deleteTodo(todo){
             this.$emit("delete-todo", todo);
+        },
+        toggleDone(todo){
+           if(!todo.done){
+               alert("Congratulations, you've completed an item!");
+           }
+           todo.done = !todo.done;
         }
     }
 };
