@@ -20,12 +20,7 @@ export default {
   },
   data(){
     return{
-      todos:[{
-        title: "for her",
-        project: "break the current situation",
-        done: true,
-        id: 0
-      },
+      todos:[
       {
         title: "hone skill 1",
         project: "practice js",
@@ -43,12 +38,6 @@ export default {
         project: "as the title explained",
         done: false,
         id: 3
-      },
-      {
-        title: "why",
-        project:"why suddenly so cold to me",
-        done: false,
-        id: 4,
       }]
     }
   },
